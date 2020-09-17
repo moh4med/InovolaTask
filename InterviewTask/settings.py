@@ -78,8 +78,14 @@ WSGI_APPLICATION = 'InterviewTask.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        "CLIENT": {
+           "name": "sampleDB",
+           "host": "mongodb+srv://mohamed:<BA6RxXn2JsQCHXHH>@cluster0.k7bgc.mongodb.net/<dbname>?retryWrites=true&w=majority",
+           "username": "mohamed",
+           "password": "BA6RxXn2JsQCHXHH",
+           "authMechanism": "SCRAM-SHA-1",
+        }, 
     }
 }
 
